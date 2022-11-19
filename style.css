@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.heading{
+    width: 10%;
+}
+.mute-button{
+    width: 5%;
+}
+.controls{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.controls:nth-of-type(2), .controls:nth-of-type(3){
+    margin-top: 50px;
+}
+.mute,.play-stop{
+    padding: 5px;
+    color: white;
+    background: #5c5b5c;
+}
+.mute{
+    border-radius: 3px;
+}
+.mute.active{
+    background: rgb(203, 203, 203);
+}
+.beatControl{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+}
+.beats{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.kick-pad, .snare-pad, .hihat-pad{
+    width:10%;
+    height: 5rem;
+}
+.kick-pad{
+    background: #7cc5dd;
+}
+.kick-pad.active{
+    background: #00a8e0;
+}
+.snare-pad{
+    background:#df7ede;
+}
+.snare-pad.active{
+    background:#d800d5;
+}
+.hihat-pad{
+    background: #e4a486;
+}
+.hihat-pad.active{
+    background: #ed8351;
+}
+.select-section{
+    width: 15%;
+}
+select{
+    margin-right: 3vw;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+.play-stop{
+    border-radius:5px;
+    padding: 8px 13px;
+   border: none;
+   margin-top: 50px;
+}
+.beats{
+    width:80%;
+}
+
+@keyframes playTrack{
+    from{
+        transform:scale(1);
+    }to{
+        transform:scale(1.2);
+    }
+    }
+
+    .fa-solid{
+        pointer-events: none;
+    }
+
+
+.tempo-div{
+    width: 30%;
+    margin-top: 20px;
+}
+
+.tempo-div p{
+    text-align: center;
+}
+
+.tempo-slider{
+    -webkit-appearance: none;
+    width: 100%;
+    width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #989898;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+.tempo-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000000;
+  cursor: pointer;
+}
+
+.tempo-slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
